@@ -22,4 +22,9 @@ public class Autor {
 
     @Column(nullable = false)
     private String nacionalidade;
+
+    public Autor(String nome, String nacionalidade) {
+        this.nome = nome;
+        this.nacionalidade = nacionalidade;
+    }
 }

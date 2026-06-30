@@ -37,9 +37,24 @@ public class Livro {
     private String categoria;
 
     @ManyToOne
+    @JoinColumn(name = "editora_id", nullable = false)
     private Editora editora;
 
     @ManyToMany
-    @JoinTable(name = "livro_autores")
+    @JoinTable(
+            name = "livro_autores",
+            joinColumns = @JoinColumn(name = "livro_id"),
+            inverseJoinColumns = @JoinColumn(name = "autor_id")
+    )
     private List<Autor> autores;
+
+    public Livro(String titulo, String isbn, BigDecimal preco, LocalDate dataPublicacao, String categoria, Editora editora, List<Autor> autores) {
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.preco = preco;
+        this.dataPublicacao = dataPublicacao;
+        this.categoria = categoria;
+        this.editora = editora;
+        this.autores = autores;
+    }
 }

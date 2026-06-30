@@ -1,8 +1,5 @@
 package com.jpql.biblioteca.dto;
 
-import com.jpql.biblioteca.model.Autor;
-import com.jpql.biblioteca.model.Editora;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;

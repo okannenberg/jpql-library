@@ -19,4 +19,8 @@ public class Editora {
 
     @Column(nullable = false)
     private String nome;
+
+    public Editora(String nome) {
+        this.nome = nome;
+    }
 }
