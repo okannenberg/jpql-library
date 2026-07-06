@@ -23,6 +23,6 @@ public class EditoraMapper {
 
     public EditoraResumoDTO toResumo(Editora editora) {
         if (editora == null) return null;
-        return new EditoraResumoDTO(editora.getId(), editora.getNome()); // Ajuste 'getNome' para o campo real da sua Editora
+        return new EditoraResumoDTO(editora.getId(), editora.getNome());
     }
 }
