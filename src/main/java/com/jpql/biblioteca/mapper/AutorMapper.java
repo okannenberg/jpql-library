@@ -25,6 +25,6 @@ public class AutorMapper {
 
     public AutorResumoDTO toResumo(Autor autor) {
         if (autor == null) return null;
-        return new AutorResumoDTO(autor.getId(), autor.getNome()); // Ajuste 'getNome' para o campo real do seu Autor
+        return new AutorResumoDTO(autor.getId(), autor.getNome());
     }
 }
